@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Prceso de metodos</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 
 
@@ -22,7 +23,7 @@
     </div>
   </div>
 
-  <div class="row justify-content-center mb-4">
+  <!-- <div class="row justify-content-center mb-4">
     <div class="col-md-8">
       <a href="#" id="laplace" class="btn btn-primary ml-4 modelo">LaPlace</a>
       <a href="#" id="hurwicz" class="btn btn-primary ml-4 modelo">Hurwicz</a>
@@ -31,35 +32,55 @@
       <a href="#" id="pesimista" class="btn btn-primary ml-4 modelo">Pesimista</a>
     </div>
 
-  </div>
+  </div> -->
 
-  <div class="row justify-content-center mt-4">
-    <div class="col-md-12 p-4" style="text-align: center;">
-      <h5> <i> Calcular Matriz </i> </h5>
-    </div>
+  <div class="row justify-content-center mt-2">
 
-    <div class="form-row col-lg-">
-      
 
-      <div class="form-group col-md-6">
-        <label for="filas">Filas</label>
-        <input type="Number" id="filas" class="form-control">
+    <form class="col-md-6 col-xl-6" action="">
+        <div class="form-row">
+          <div class="form-group col-md-12">
+           <select multiple class="form-control" name="method" id="method">
+             <option selected>Metodos:</option>
+             <option value="laplace">LaPlace</option>
+             <option value="hurwicz">Hurwicz</option>
+             <option value="savage">Savage</option>
+             <option value="optimista">Optimista</option>
+             <option value="pesimista">Pesimista</option>
+           </select>
+         </div>
+       </div>
+
+       <div class="col-md-12 p-4" style="text-align: center;">
+        <h5> <i> Calcular Matriz </i> </h5>
       </div>
-      
-      <div class="form-group col-md-6">
-        <label for="columnas">Columnas</label>
-        <input type="Number" id="columnas" class="form-control">
-      </div>
 
-    </div>
+       <div class="form-row">
+         <div class="form-group col-md-6">
+           <label for="filas">Filas</label>
+           <input type="Number" id="filas" class="form-control">
+         </div>
+         <div class="form-group col-md-6">
+           <label for="columnas">Columnas</label>
+           <input type="Number" id="columnas" class="form-control">
+         </div>
+        </div>
 
-  </div>
+       <div class="form-row mt-5 justify-content-center">
+        <div class="form-group col-md-12">
+          <button type="button" class="btn btn-primary reload hide" id="">Rellenar</button>
 
+        </div>
+        <div class="form-group matriz">
+        </div>
+       </div>
 
+      </form>
 </div>
   
 
   <script src="methods/metodos.js"></script>
+  <script src="views/main.js"></script>
 
 </body>
 </html>
