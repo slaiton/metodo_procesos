@@ -37,11 +37,11 @@
   <div class="row justify-content-center mt-2">
 
 
-    <form class="col-md-6 col-xl-6" action="">
+    <form class="col-md-6 col-xl-6 valorEsp" type="POST">
         <div class="form-row">
           <div class="form-group col-md-12">
            <select multiple class="form-control" name="method" id="method">
-             <option selected>Metodos:</option>
+             <option value="0" selected>Metodos:</option>
              <option value="laplace">LaPlace</option>
              <option value="hurwicz">Hurwicz</option>
              <option value="savage">Savage</option>
@@ -75,7 +75,14 @@
         </div>
        </div>
 
+       <button type="submit" class="btn btn-success">Calcular</button>
+
       </form>
+      <div class="row mt-5 col-md-12 justify-content-center">
+        <div class="col-md-4">
+        <h3 id="result"></h3>
+      </div>
+    </div>
 </div>
   
 

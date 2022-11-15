@@ -34,11 +34,11 @@
 
 var filas = 0;
     columnas = 0;
-    matriz = [[4,5,6,5],[10,15,0,3],[11,8,1,5],[6,4,2,9]];
+    // matriz = [[4,5,6,5],[10,15,0,3],[11,8,1,5],[6,4,2,9]];
     coheficiente = 0;
 
-    resp =  laPlace(matriz);            
-    console.log(resp);
+    // resp =  laPlace(matriz);            
+    // console.log(resp);
                 
 
     function laPlace(matriz)
@@ -74,6 +74,6 @@ var filas = 0;
         anterior = totalFinal;
     }
 
-      console.log("Valor esperado: "+mayor);
+      return mayor;
 
     }
