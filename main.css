@@ -7,12 +7,77 @@
     display:none;
 }
 
+
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
 }
+.titulo { 
+    text-align:center;
+    /* background-color: rgb(26, 20, 76); */
+    color: rgb(255, 255, 255);
+    box-shadow: 10px 20px 20px #1AAAF3;
+}
 
+.fondo{
+    background-color: #1a144c;
+    background-image: url("images/fondo3.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: 100% 70%;	
+    
+}
+.integrantes h5{
+    color: aqua;
+}
+nav-link{
+    color: rgb(255, 255, 255);
+}
+.filas label{
+    color: white;
+    font-size: 30px !important;
+    font-weight: 500;
+    
+}
+.calcular_matriz{
+    text-shadow: 10px  20px 3.5px rgb(0, 183, 255);
+    color: white;
+}
+.calcular{
+    color: rgb(255, 255, 255);
+    background-color: rgb(12, 88, 138);
+    box-shadow: 10px 20px 20px #1AAAF3;
+    font-size: 25px;
+}
+.rellenar{
+    
+    color: rgb(255, 255, 255);
+    background-color: rgb(12, 88, 138);
+    box-shadow: 10px 20px 20px #1AAAF3;
+    font-size: 25px;
+}
+.caja{
+    background-color: #afd2e4; ;
+    box-shadow: 10px 20px 20px #1AAAF3;
+}
+.box{
+    background-color: #afd2e4; ;
+    box-shadow: 10px 20px 20px #1AAAF3;
+}
+.grilla{
+    background-color: #afd2e4; ;
+    box-shadow: 10px 20px 20px #1AAAF3;
+}
+.Pie_pagina{
+    background-color: #1a144c;
+}
+.integrantes{
+    justify-content: flex-end !important;
+    display: flex !important;
+}
+.nav-link{
+    color: rgb(255, 255, 255) !important;
+}
 /* .matriz {
     width: auto;
 } */
