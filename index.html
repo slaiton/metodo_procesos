@@ -15,11 +15,24 @@
 </head>
 <body>
 
-<div class="contrainer-fluid">
+
+
+<div class="contrainer-fluid fondo">
   <div class="row justify-content-center p-4 card-title"> 
+    <div class="col-md-12 titulo " >
+      <h1>Investigación de operaciones</h1>
+    </div>
+  </div>
+
+  <!--Linea separadora del titulo y el titulo secundario -->
+  <div 
+    class= "col-md-12 border-top mt-1 p-1">
+  </div>
+
+  <div class="row justify-content-center p-4 card-title calcular_matriz"> 
     <div class="col-md-4" style="text-align:center ;">
       <h2>Calcular Valor Esperado de una Matriz Online</h2>
-      <h5> <i> Metodos </i> </h5>
+      <h3> <i> Metodos </i> </h3>
     </div>
   </div>
 
@@ -40,7 +53,7 @@
     <form class="col-md-6 col-xl-6 valorEsp" type="POST">
         <div class="form-row">
           <div class="form-group col-md-12">
-           <select multiple class="form-control" name="method" id="method">
+           <select multiple class="form-control caja" name="method" id="method">
              <option value="0" selected>Metodos:</option>
              <option value="laplace">LaPlace</option>
              <option value="hurwicz">Hurwicz</option>
@@ -51,40 +64,67 @@
          </div>
        </div>
 
-       <div class="col-md-12 p-4" style="text-align: center;">
-        <h5> <i> Calcular Matriz </i> </h5>
+       <div class="col-md-12 p-4 calcular_matriz" style="text-align: center;">
+        <h3> <i> Calcular Matriz </i> </h3>
       </div>
 
-       <div class="form-row">
+       <div class="form-row filas">
          <div class="form-group col-md-6">
            <label for="filas">Filas</label>
-           <input type="Number" id="filas" class="form-control">
+           <input type="Number" id="filas" class="form-control box">
          </div>
          <div class="form-group col-md-6">
            <label for="columnas">Columnas</label>
-           <input type="Number" id="columnas" class="form-control">
+           <input type="Number" id="columnas" class="form-control box">
          </div>
         </div>
 
-       <div class="form-row mt-5 justify-content-center">
+       <div class="form-row mt-5 justify-content-center ">
         <div class="form-group col-md-12">
-          <button type="button" class="btn btn-primary reload hide" id="">Rellenar</button>
+          <button type="button" class="btn btn-primary reload hide rellenar" id="">Rellenar</button>
 
         </div>
-        <div class="form-group matriz">
+        <div class="form-group matriz grilla">
         </div>
        </div>
 
-       <button type="submit" class="btn btn-success">Calcular</button>
+       <button type="submit" class="btn btn-success calcular">Calcular</button>
 
       </form>
       <div class="row mt-5 col-md-12 justify-content-center">
-        <div class="col-md-4">
+        <div class="col-md-4 calcular_matriz">
         <h3 id="result"></h3>
       </div>
     </div>
 </div>
   
+  <div class="container-fluid Pie_pagina p-5">
+    <footer class="py-1">
+      <div class="row integrantes">
+        <div class="col-3">
+          <h5>Integrantes</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Jhoan Stiven Laiton </a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Andrés Esteban Hernández Moreno</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Eduin David Rodríguez Russi </a></li>
+          </ul>
+        </div>
+
+        <div class="col-2">
+          <h5>Codigos</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">52223</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">62156</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">72520</a></li>
+          </ul>
+        </div>
+
+      <div class= "col-md-12 border-top mt-5 p-1">
+      <img src="images/logo_blanco.png" alt="Logo" width ="500">
+        <!-- <p>ECCI</p> -->
+      </div>
+    </footer>
+  </div>
 
   <script src="methods/metodos.js"></script>
   <script src="views/main.js"></script>
