@@ -21,7 +21,8 @@ $(".valorEsp").on('submit', function(e){
                 break;
 
             case 'hurwicz':
-                var result = hurwicz(matriz, 0.65);
+                var cohe = $("#cohe").val();
+                var result = hurwicz(matriz, cohe);
                 break;
 
             case 'savage':
@@ -49,6 +50,17 @@ $(".valorEsp").on('submit', function(e){
     
 });
 
+$("#method").on('blur', function(){
+    //alert(0);
+    if($("#method").val() == 'hurwicz')
+    {
+       $(".coheficiente").css('display', 'block');
+     }else{
+       $(".coheficiente").css('display', 'none');
+     }
+    
+});
+
 
 
 
@@ -66,10 +78,10 @@ $(".valorEsp").on('submit', function(e){
 
                  obj += "<table>"
      
-             for (let a = 0; a < col; a++) {
+             for (let a = 0; a < fil; a++) {
                  obj += "<tr>";
-                 for (let b = 0; b < fil; b++) {
-                     obj += "<td>  <input style='width:50px;' type='number' id='"+a+"-"+b+"'>  <td>";
+                 for (let b = 0; b < col; b++) {
+                     obj += "<td>  <input style='width:50px;' step='any' type='number' id='"+a+"-"+b+"'>  <td>";
                  }
                  obj += "</tr>";
              }
@@ -117,9 +129,9 @@ function getRandomNumber(min, max)
     var arrGrande = [];
     // var arrMedian = [];
 
-    for (let a = 0; a < col; a++) {
+    for (let a = 0; a < fil; a++) {
      var arrMedian = [];
-     for (let b = 0; b < fil; b++) {
+     for (let b = 0; b < col; b++) {
          var number = getRandomNumber(1,999);
          arrMedian.push(number);
          var id = a+"-"+b;
@@ -140,9 +152,9 @@ function getRandomNumber(min, max)
      var arrGrande = [];
      // var arrMedian = [];
  
-     for (let a = 0; a < col; a++) {
+     for (let a = 0; a < fil; a++) {
       var arrMedian = [];
-      for (let b = 0; b < fil; b++) {
+      for (let b = 0; b < col; b++) {
           var id = a+"-"+b;
           var number = $("#"+id).val();
           arrMedian.push(parseInt(number));

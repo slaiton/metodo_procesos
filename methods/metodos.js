@@ -44,11 +44,11 @@ var filas = 0;
     function laPlace(matriz)
     {
 
-        console.log("matriz:");
+        console.log(matriz.length);
         console.log(matriz);
 
 
-    var coh = matriz.length;
+    var coh = matriz[0].length;
     var totalFila = 0;
     var totalFinal = 0;
     var mayor = 0;
